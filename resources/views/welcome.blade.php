@@ -88,7 +88,7 @@
                                     <tr>
                                         <td>{{ $c->nomor }}</td>
                                         <td>{{ $c->nama }}</td>
-                                        <td><a href="{{ $c->file }}" class="btn btn-primary">Download</a></td>
+                                        <td><a href="{{ asset('DataCertificate') }}/{{ $c->file }}" class="btn btn-primary">Download</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
