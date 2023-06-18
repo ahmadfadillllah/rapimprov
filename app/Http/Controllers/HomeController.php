@@ -29,14 +29,39 @@ class HomeController extends Controller
         return view('import');
     }
 
+    public function hapus()
+    {
+        $certificate = Certificate::all();
+        return view('hapus', compact('certificate'));
+    }
+
     public function importpush(Request $request)
     {
-        $file = $request->file('file');
-        $namaFile = $file->getClientOriginalName();
-        $file->move('DataCertificate', $namaFile);
+        $date = date('gis');
 
-        Excel::import(new CertificateImport, public_path('/DataCertificate/'.$namaFile));
+        try {
+            $barang = new Certificate;
+            $barang->nomor = $request->nomor;
+            $barang->nama = $request->nama;
+            if($request->hasFile('file')){
+                $request->file('file')->move('DataCertificate/', $date.$request->file('file')->getClientOriginalName());
+                $barang->file = $date.$request->file('file')->getClientOriginalName();
+                $barang->save();
+            }
+            return redirect()->back()->with('success', 'Sertifikat Berhasil di Upload');
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('info', 'Sertifikat Gagal di Upload');
+        }
+    }
 
-        return redirect('/')->with('success', 'Data Berhasil Di Import');
+    public function destroy($id)
+    {
+        try {
+            Certificate::where('id', $id)->delete();
+
+            return redirect()->back()->with('success', 'Sertifikat berhasil dihapus');
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('info', $th->getMessage());
+        }
     }
 }

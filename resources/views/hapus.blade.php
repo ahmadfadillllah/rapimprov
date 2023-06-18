@@ -58,9 +58,28 @@
     <!-- modernizr JS
 		============================================ -->
     <script src="{{ asset('wpks') }}/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
+    @if (session('success'))
+    <script>
+        Swal.fire(
+        'Good..',
+        '{{ session('success') }}',
+        'success'
+        )
+    </script>
+    @endif
+    @if (session('info'))
+    <script>
+        Swal.fire(
+        'Upps..',
+        '{{ session('info') }}',
+        'info'
+        )
+    </script>
+    @endif
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -88,7 +107,7 @@
                                     <tr>
                                         <td>{{ $c->nomor }}</td>
                                         <td>{{ $c->nama }}</td>
-                                        <td><a href="{{ asset('DataCertificate') }}/{{ $c->file }}" class="btn btn-primary">Download</a></td>
+                                        <td><a href="{{ route('home.destroy', $c->id) }}" class="btn btn-danger">Hapus</a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
