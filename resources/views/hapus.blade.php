@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>E-Certificate WPKS</title>
-    <meta name="description" content="Download E-Certificate WPKS">
+    <title>E-Certificate RAPIMROV</title>
+    <meta name="description" content="Download E-Certificate RAPIMROV">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
@@ -90,7 +90,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="data-table-list">
                         <div class="basic-tb-hd">
-                            <h2>E-Certificate WPKS</h2>
+                            <h2>E-Certificate RAPIMROV</h2>
                             <p>Silahkan mencari sertifikatnya masing-masing, dan menekan tombol download,, jika nama tidak ada silahkan hubungi (Aslan Lasali: +62 822-9231-3475)</p>
                         </div>
                         <div class="table-responsive">
