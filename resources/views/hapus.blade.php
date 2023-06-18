@@ -91,7 +91,7 @@
                     <div class="data-table-list">
                         <div class="basic-tb-hd">
                             <h2>E-Certificate RAPIMROV</h2>
-                            <p>Silahkan mencari sertifikatnya masing-masing, dan menekan tombol download,, jika nama tidak ada silahkan hubungi (Aslan Lasali: +62 822-9231-3475)</p>
+                            <p>Silahkan mencari sertifikatnya masing-masing, dan menekan tombol download,, jika nama tidak ada silahkan hubungi (Jihan Hulwah Syahrin: +62 823-4175-8014)</p>
                         </div>
                         <div class="table-responsive">
                             <table id="data-table-basic" class="table table-striped">
